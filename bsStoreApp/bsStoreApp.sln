@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi\WebApi.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{964FAB1E-B611-4C01-BF66-5BA2749D95CE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositories", "Repositories\Repositories.csproj", "{8D3A0F88-4081-4443-9A7F-07DD068D7730}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,8 +23,15 @@ Global
 		{964FAB1E-B611-4C01-BF66-5BA2749D95CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{964FAB1E-B611-4C01-BF66-5BA2749D95CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{964FAB1E-B611-4C01-BF66-5BA2749D95CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D3A0F88-4081-4443-9A7F-07DD068D7730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D3A0F88-4081-4443-9A7F-07DD068D7730}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D3A0F88-4081-4443-9A7F-07DD068D7730}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D3A0F88-4081-4443-9A7F-07DD068D7730}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E7DBD87A-155E-4141-89B3-1BBFB81757F2}
 	EndGlobalSection
 EndGlobal
