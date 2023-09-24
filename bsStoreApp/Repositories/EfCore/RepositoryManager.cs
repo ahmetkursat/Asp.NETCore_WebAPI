@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 using Repositories.Contracts;
 
 namespace Repositories.EfCore
@@ -11,7 +12,6 @@ namespace Repositories.EfCore
     {
         private readonly RepositoryContext _context;
         private readonly Lazy<IBookRepository> _bookRepository;
-
 
         public RepositoryManager(RepositoryContext context)
         {

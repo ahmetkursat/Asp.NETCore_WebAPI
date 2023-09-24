@@ -19,7 +19,7 @@ namespace Repositories.EfCore
         public IQueryable<Book> GetAllBooks(bool trackChanges) => FindAll(trackChanges);
 
 
-        public IQueryable<Book> GetOneBookById(bool trackChanges, int id) => FindByCondition(b => b.Id.Equals(id),trackChanges).OrderBy(b => b.Id);
+        public Book GetOneBookById(bool trackChanges, int id) => FindByCondition(b => b.Id.Equals(id),trackChanges).OrderBy(b => b.Id).SingleOrDefault();
 
 
         public void CreateOneBook(Book book) => Create(book);

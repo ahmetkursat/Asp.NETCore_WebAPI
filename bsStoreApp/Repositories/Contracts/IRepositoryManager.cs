@@ -11,6 +11,5 @@ namespace Repositories.Contracts
         IBookRepository Book { get; }
         void Save();
 
-
     }
 }
