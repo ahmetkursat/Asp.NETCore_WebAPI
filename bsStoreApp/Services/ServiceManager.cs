@@ -15,7 +15,6 @@ namespace Services
         {
             _bookService = new Lazy<IBookService>(() => new BookManager(repositoryManager));
         }
-
         public IBookService BookService => _bookService.Value;
     }
 }
