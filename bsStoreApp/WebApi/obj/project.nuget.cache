@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jhVMMBKtnslV5prWSesiajOYZx/FFaUxsvt9+JW3NNXVmzA/F/Qcg5rvnXnJ1yEcngRCOsomGcxF+YKNzOShKw==",
+  "dgSpecHash": "IE6VQfHhTFXkm+3vXtpehliSYqTJLJAGkyFE7lyirvkc+HA+S/fB/oMgj+WQNCNaxtGevUgG4SyslzFBOU4KbQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\GitHub\\Asp.NET_CORE_WEB_APİ\\bsStoreApp\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
@@ -66,6 +66,8 @@
     "C:\\Users\\ahmet\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\ahmet\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\ahmet\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\ahmet\\.nuget\\packages\\nlog\\5.2.4\\nlog.5.2.4.nupkg.sha512",
+    "C:\\Users\\ahmet\\.nuget\\packages\\nlog.extensions.logging\\5.3.4\\nlog.extensions.logging.5.3.4.nupkg.sha512",
     "C:\\Users\\ahmet\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "C:\\Users\\ahmet\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "C:\\Users\\ahmet\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
