@@ -94,6 +94,7 @@ namespace Presentation.Controllers
             [HttpDelete("{id:int}")]
             public IActionResult DeleteOneBooks([FromRoute(Name = "id")] int id)
             {
+     
                 try
                 {
                     _manager.BookService.DeleteOneBook(id, false);
