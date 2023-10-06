@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using Entities.Exceptions;
 using Entities.Models;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Repositories.Contracts;
@@ -30,7 +31,12 @@ namespace Services
 
         public Book GetOneBookById(int id, bool trackChanges)
         {
-            return _manager.Book.GetOneBookById(trackChanges,id);
+            var book = _manager.Book.GetOneBookById(trackChanges,id);
+            if (book == null)
+            {
+                throw new BookNotFoundException(id);
+            }
+            return book;
         }
 
         public Book CreateOneBook(Book book)
@@ -51,9 +57,7 @@ namespace Services
             //check entity
             if (entity is null)
             {
-                string msg = $"Book with id:{id} could not found.";
-                _logger.LogInfo(msg);
-                throw new Exception(msg);
+                throw new BookNotFoundException(id);
             }
             //check params
             if (book is null)

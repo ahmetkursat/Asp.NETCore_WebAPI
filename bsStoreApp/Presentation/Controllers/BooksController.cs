@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Entities.Exceptions;
 using Entities.Models;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
@@ -33,10 +34,6 @@ namespace Presentation.Controllers
         public IActionResult GetOneBooks([FromRoute(Name = "id")] int id)
         {
             var book = _manager.BookService.GetOneBookById(id, false);
-            if (book is null)
-            {
-                return NotFound();
-            }
 
             return Ok(book);
         }
@@ -88,10 +85,9 @@ namespace Presentation.Controllers
         
             var entity = _manager.BookService.GetOneBookById(id, false);
 
-            if (entity is null)
-            {
-                return NotFound();
-            }
+
+
+            bookPatch.ApplyTo(entity);
 
             _manager.BookService.UpdateOneBook(id, entity, false);
 
