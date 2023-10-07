@@ -14,3 +14,5 @@
 2023-10-06 15:50:16.0739 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
 2023-10-06 15:50:16.0976 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\ahmet\OneDrive\Belgeler\GitHub\Asp.NET_CORE_WEB_APİ\bsStoreApp\WebApi\Nlog.config
 2023-10-06 15:50:16.1165 Info Configuration initialized.
+2023-10-06 17:53:07.5748 Info AppDomain Shutting down. LogFactory closing...
+2023-10-06 17:53:07.6034 Info LogFactory has been closed.

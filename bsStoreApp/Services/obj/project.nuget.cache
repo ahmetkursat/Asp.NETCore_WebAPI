@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "x587ZO8b2kWR/le+tNvjN5ZfrtM7BksGsMtooN66ek5tGgOdPydxhZPvzJLQ7LPwA657O/mT70+A0dvDXcphkw==",
+  "dgSpecHash": "15rTs9i7juUv+/mqRivV4FEr1kvn1U79nk7SRwn6VGNVnxTBfk6wgzYEm4c8Pd7RjysawLaDtxNM5ph7KYdhuw==",
   "success": true,
   "projectFilePath": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\GitHub\\Asp.NET_CORE_WEB_APİ\\bsStoreApp\\Services\\Services.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ahmet\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\ahmet\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\ahmet\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\ahmet\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.0\\microsoft.entityframeworkcore.7.0.0.nupkg.sha512",
     "C:\\Users\\ahmet\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.0\\microsoft.entityframeworkcore.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\ahmet\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.0\\microsoft.entityframeworkcore.analyzers.7.0.0.nupkg.sha512",
