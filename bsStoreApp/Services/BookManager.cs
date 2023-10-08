@@ -4,6 +4,8 @@ using System.Linq;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
+using Entities.DataTransferObject;
 using Entities.Exceptions;
 using Entities.Models;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
@@ -16,11 +18,13 @@ namespace Services
     {
         private readonly IRepositoryManager _manager;
         private readonly ILoggerService _logger;
+        private readonly IMapper _mapper;
 
-        public BookManager(IRepositoryManager manager, ILoggerService logger)
+        public BookManager(IRepositoryManager manager, ILoggerService logger, IMapper mapper)
         {
             _manager = manager;
             _logger = logger;
+            _mapper = mapper;
         }
 
 
@@ -51,7 +55,7 @@ namespace Services
             return book;
         }
 
-        public void UpdateOneBook(int id, Book book, bool trackChanges)
+        public void UpdateOneBook(int id, BookDtoForUpdate bookDto, bool trackChanges)
         {
             var entity = _manager.Book.GetOneBookById(trackChanges,id);
             //check entity
@@ -60,12 +64,14 @@ namespace Services
                 throw new BookNotFoundException(id);
             }
             //check params
-            if (book is null)
+            if (bookDto is null)
             {
-                throw new ArgumentNullException(nameof(book));
+                throw new ArgumentNullException(nameof(bookDto));
             }
-            entity.Title = book.Title;
-            entity.Price = book.Price;
+            //mapping
+            //entity.Title = book.Title;
+            //entity.Price = book.Price;
+            entity = _mapper.Map<Book>(bookDto);
 
             _manager.Book.Update(entity);
             _manager.Save();
