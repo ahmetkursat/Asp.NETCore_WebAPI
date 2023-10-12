@@ -8,7 +8,8 @@ namespace WebApi.Utilities.AutoMapper
     {
         public MappingProfile()
         {
-            CreateMap<BookDtoForUpdate, Book>();
+            CreateMap<BookDtoForUpdate, Book>(); //veriyi upgrade edip değiştirdiğimiz için
+            CreateMap<Book, BookDto>(); //getall methodunbda veriyi önce bulup cektigimiz için
         }
     }
 }
