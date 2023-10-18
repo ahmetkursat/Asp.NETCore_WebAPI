@@ -10,6 +10,7 @@ namespace WebApi.Utilities.AutoMapper
         {
             CreateMap<BookDtoForUpdate, Book>(); //veriyi upgrade edip değiştirdiğimiz için
             CreateMap<Book, BookDto>(); //getall methodunbda veriyi önce bulup cektigimiz için
+            CreateMap<BookDtoForInsert, Book>();
         }
     }
 }
