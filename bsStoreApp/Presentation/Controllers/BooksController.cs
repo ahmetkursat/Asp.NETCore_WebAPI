@@ -67,12 +67,12 @@ namespace Presentation.Controllers
 
         if (bookDto is null)
         {
-            return BadRequest();
+            return BadRequest();//400
         }
 
         if (!ModelState.IsValid)
             {
-                return UnprocessableEntity(ModelState);
+                return UnprocessableEntity(ModelState);//404
             }
 
         _manager.BookService.UpdateOneBook(id, bookDto , false);
@@ -98,7 +98,7 @@ namespace Presentation.Controllers
 
 
 
-            bookPatch.ApplyTo(bookDto);
+            bookPatch.ApplyTo(bookDto,ModelState);
 
             _manager.BookService.UpdateOneBook(id, new BookDtoForUpdate
             {
