@@ -68,3 +68,21 @@
 2023-10-20 17:32:40.9124 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
 2023-10-20 17:32:40.9237 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\ahmet\OneDrive\Belgeler\GitHub\Asp.NET_CORE_WEB_APİ\bsStoreApp\WebApi\Nlog.config
 2023-10-20 17:32:40.9237 Info Configuration initialized.
+2023-10-20 17:39:29.3871 Info AppDomain Shutting down. LogFactory closing...
+2023-10-20 17:39:29.4015 Info LogFactory has been closed.
+2023-10-20 17:40:08.5733 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2023-10-20 17:40:08.5944 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-20 17:40:08.6096 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\ahmet\OneDrive\Belgeler\GitHub\Asp.NET_CORE_WEB_APİ\bsStoreApp\WebApi\Nlog.config
+2023-10-20 17:40:08.6229 Info Configuration initialized.
+2023-10-20 17:40:59.4435 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2023-10-20 17:40:59.4801 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-20 17:40:59.5002 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\ahmet\OneDrive\Belgeler\GitHub\Asp.NET_CORE_WEB_APİ\bsStoreApp\WebApi\Nlog.config
+2023-10-20 17:40:59.5267 Info Configuration initialized.
+2023-10-20 17:46:43.2504 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2023-10-20 17:46:43.2655 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-20 17:46:43.2655 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\ahmet\OneDrive\Belgeler\GitHub\Asp.NET_CORE_WEB_APİ\bsStoreApp\WebApi\Nlog.config
+2023-10-20 17:46:43.2864 Info Configuration initialized.
+2023-10-20 17:46:47.8266 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2023-10-20 17:46:47.8609 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-20 17:46:47.8784 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\ahmet\OneDrive\Belgeler\GitHub\Asp.NET_CORE_WEB_APİ\bsStoreApp\WebApi\Nlog.config
+2023-10-20 17:46:47.8943 Info Configuration initialized.
