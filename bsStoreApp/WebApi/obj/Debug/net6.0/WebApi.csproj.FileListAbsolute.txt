@@ -100,3 +100,5 @@ C:\Users\ahmet\OneDrive\Belgeler\GitHub\Asp.NET_CORE_WEB_APİ\bsStoreApp\WebApi\
 C:\Users\ahmet\OneDrive\Belgeler\GitHub\Asp.NET_CORE_WEB_APİ\bsStoreApp\WebApi\bin\Debug\net6.0\NLog.Extensions.Logging.dll
 C:\Users\ahmet\OneDrive\Belgeler\GitHub\Asp.NET_CORE_WEB_APİ\bsStoreApp\WebApi\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\ahmet\OneDrive\Belgeler\GitHub\Asp.NET_CORE_WEB_APİ\bsStoreApp\WebApi\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\ahmet\OneDrive\Belgeler\GitHub\Asp.NET_CORE_WEB_APİ\bsStoreApp\WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\ahmet\OneDrive\Belgeler\GitHub\Asp.NET_CORE_WEB_APİ\bsStoreApp\WebApi\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll

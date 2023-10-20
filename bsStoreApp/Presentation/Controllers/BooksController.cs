@@ -91,23 +91,23 @@ namespace Presentation.Controllers
     [HttpPatch("{id:int}")]
 
     public IActionResult PartiallyUpdateOneBook([FromRoute(Name = "id")] int id,
-        [FromBody] JsonPatchDocument<BookDto> bookPatch)
+        [FromBody] JsonPatchDocument<BookDtoForUpdate> bookPatch)
     {
         
+            if (bookPatch is null)
+                return BadRequest();
+            var result = _manager.BookService.GetOneBookForPatch(id, false);
+
             var bookDto = _manager.BookService.GetOneBookById(id, false);
 
+            bookPatch.ApplyTo(result.bookDtoForUpdate,ModelState);
 
+            TryValidateModel(result.bookDtoForUpdate);
 
-            bookPatch.ApplyTo(bookDto,ModelState);
+            if (!ModelState.IsValid)
+                return UnprocessableEntity();
 
-            _manager.BookService.UpdateOneBook(id, new BookDtoForUpdate
-            {
-                Id = bookDto.Id,
-                Title = bookDto.Title,
-                Price = bookDto.Price,
-
-            }, true);
-
+            _manager.BookService.SaveChangesForPatch(result.bookDtoForUpdate, result.book);
 
             return NoContent();
         
