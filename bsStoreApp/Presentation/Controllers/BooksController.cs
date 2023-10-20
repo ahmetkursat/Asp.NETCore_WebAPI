@@ -41,15 +41,20 @@ namespace Presentation.Controllers
     
 
     [HttpPost]
-    public IActionResult CreateOneBooks([FromBody] Book book)
+    public IActionResult CreateOneBooks([FromBody] BookDtoForInsert bookDto)
     {
 
-        if (book is null)
+        if (bookDto is null)
         {
             return BadRequest();
         }
+            if (!ModelState.IsValid)
+            {
+                return UnprocessableEntity(ModelState);
+            }
 
-        _manager.BookService.CreateOneBook(book);
+
+        var book = _manager.BookService.CreateOneBook(bookDto);
 
 
         return StatusCode(201, book);
@@ -81,16 +86,22 @@ namespace Presentation.Controllers
     [HttpPatch("{id:int}")]
 
     public IActionResult PartiallyUpdateOneBook([FromRoute(Name = "id")] int id,
-        [FromBody] JsonPatchDocument bookPatch)
+        [FromBody] JsonPatchDocument<BookDto> bookPatch)
     {
         
-            var entity = _manager.BookService.GetOneBookById(id, false);
+            var bookDto = _manager.BookService.GetOneBookById(id, false);
 
 
 
-            bookPatch.ApplyTo(entity);
+            bookPatch.ApplyTo(bookDto);
 
-            _manager.BookService.UpdateOneBook(id, new BookDtoForUpdate(entity.Id,entity.Title,entity.Price), true);
+            _manager.BookService.UpdateOneBook(id, new BookDtoForUpdate
+            {
+                Id = bookDto.Id,
+                Title = bookDto.Title,
+                Price = bookDto.Price,
+
+            }, true);
 
 
             return NoContent();

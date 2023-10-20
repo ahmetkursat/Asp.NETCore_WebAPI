@@ -9,9 +9,9 @@ namespace Entities.DataTransferObject
 {
     public abstract record BookDtoForManipulation
     {
-        [Required]
-        [MinLength(2)]
-        [MaxLength(50)]
+        [Required(ErrorMessage ="Title is required field")]
+        [MinLength(2,ErrorMessage ="Title is must consist of at least 2 characters")]
+        [MaxLength(50, ErrorMessage = "Title is must consist of at maximum 50 characters")]
         public String Title { get; init; }
         [Required]
         [Range(10,1000)]

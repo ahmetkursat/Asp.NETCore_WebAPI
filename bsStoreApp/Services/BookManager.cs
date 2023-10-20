@@ -35,26 +35,23 @@ namespace Services
            return _mapper.Map<IEnumerable<BookDto>>(books);
         }
 
-        public Book GetOneBookById(int id, bool trackChanges)
+        public BookDto GetOneBookById(int id, bool trackChanges)
         {
             var book = _manager.Book.GetOneBookById(trackChanges,id);
             if (book == null)
             {
                 throw new BookNotFoundException(id);
             }
-            return book;
+            return _mapper.Map<BookDto>(book);
         }
 
-        public Book CreateOneBook(Book book)
+        public BookDto CreateOneBook(BookDtoForInsert bookDto)
         {
-            if (book is null)
-            {
-                throw new ArgumentNullException(nameof(book));
-            }
+            var entity = _mapper.Map<Book>(bookDto);
 
-            _manager.Book.CreateOneBook(book);
+            _manager.Book.CreateOneBook(entity);
             _manager.Save();
-            return book;
+            return _mapper.Map<BookDto>(entity);
         }
 
         public void UpdateOneBook(int id, BookDtoForUpdate bookDto, bool trackChanges)

@@ -1,7 +1,7 @@
 ﻿namespace Entities.DataTransferObject
 
 {
-    public record BookDtoForInsert
+    public record BookDtoForInsert : BookDtoForManipulation
     {
 
     }
