@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Entities.Models;
+using Microsoft.EntityFrameworkCore;
 using Repositories.Contracts;
 
 namespace Repositories.EfCore
@@ -16,10 +17,10 @@ namespace Repositories.EfCore
 
         }
 
-        public IQueryable<Book> GetAllBooks(bool trackChanges) => FindAll(trackChanges);
+        public async Task<IEnumerable<Book>> GetAllBooksAsync(bool trackChanges) => await FindAll(trackChanges).OrderBy(b => b.Id).ToListAsync();
 
 
-        public Book GetOneBookById(bool trackChanges, int id) => FindByCondition(b => b.Id.Equals(id),trackChanges).OrderBy(b => b.Id).SingleOrDefault();
+        public async Task<Book> GetOneBookByIdAsync(bool trackChanges, int id) => await FindByCondition(b => b.Id.Equals(id),trackChanges).OrderBy(b => b.Id).SingleOrDefaultAsync();
 
 
         public void CreateOneBook(Book book) => Create(book);
