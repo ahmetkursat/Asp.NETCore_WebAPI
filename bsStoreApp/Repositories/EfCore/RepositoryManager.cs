@@ -20,9 +20,16 @@ namespace Repositories.EfCore
         }
 
         public IBookRepository Book => _bookRepository.Value;
-        public async Task Save()
+        public async Task SaveAsync()
         {
            await _context.SaveChangesAsync();
+        }
+
+        
+
+        void IRepositoryManager.Save()
+        {
+            throw new NotImplementedException();
         }
     }
 }

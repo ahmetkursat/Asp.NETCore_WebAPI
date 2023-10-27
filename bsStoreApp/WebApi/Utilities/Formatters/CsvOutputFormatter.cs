@@ -15,8 +15,6 @@ namespace WebApi.Utilities.Formatters
             
         }
 
-        
-
         public override Task WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
         {
             throw new NotImplementedException();
