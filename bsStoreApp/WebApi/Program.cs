@@ -31,8 +31,7 @@ builder.Services.ConfigureRepositoryManager();
 builder.Services.ConfigureServiceManager();
 builder.Services.ConfigureLoggerManager();
 builder.Services.AddAutoMapper(typeof(Program));
-builder.Services.AddScoped<ValidationFilterAttribute>();
-
+builder.Services.ConfigureActionFilters();
 
 var app = builder.Build();
 

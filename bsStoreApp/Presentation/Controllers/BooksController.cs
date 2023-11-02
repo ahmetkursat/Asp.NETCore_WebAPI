@@ -8,12 +8,15 @@ using Entities.Exceptions;
 using Entities.Models;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Presentation.ActionFilters;
 using Services.Contracts;
 
 namespace Presentation.Controllers
 {
     [ApiController]
+    //12.36da kaldımlogfilters
+    [ServiceFilter(typeof(LogFilterAttribute))]
     [Route("api/books")]
     public class BooksController : ControllerBase
     {
