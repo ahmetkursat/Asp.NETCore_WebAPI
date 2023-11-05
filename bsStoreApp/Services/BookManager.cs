@@ -37,11 +37,8 @@ namespace Services
 
         public async Task<BookDto> GetOneBookByIdAsync(int id, bool trackChanges)
         {
-            var book = await _manager.Book.GetOneBookByIdAsync(trackChanges,id);
-            if (book == null)
-            {
-                throw new BookNotFoundException(id);
-            }
+            var book = await GetOneBookAndCheckExits(id, trackChanges);
+            
             return _mapper.Map<BookDto>(book);
         }
 
@@ -56,17 +53,9 @@ namespace Services
 
         public async Task UpdateOneBookAsync(int id, BookDtoForUpdate bookDto, bool trackChanges)
         {
-            var entity = await _manager.Book.GetOneBookByIdAsync(trackChanges,id);
+            var entity = await GetOneBookAndCheckExits(id, trackChanges);
             //check entity
-            if (entity is null)
-            {
-                throw new BookNotFoundException(id);
-            }
-            //check params
-            if (bookDto is null)
-            {
-                throw new ArgumentNullException(nameof(bookDto));
-            }
+            
             //mapping
             //entity.Title = book.Title;
             //entity.Price = book.Price;
@@ -79,13 +68,7 @@ namespace Services
 
         public async Task DeleteOneBookAsync(int id, bool trackChanges)
         {
-            var entity = await _manager.Book.GetOneBookByIdAsync(trackChanges, id);
-            if (entity is null)
-            {
-                string message = $"The book with id :{id} could not found";
-                _logger.LogInfo(message);
-                throw new Exception(message);
-            }
+            var entity = await GetOneBookAndCheckExits(id, trackChanges);
             _manager.Book.DeleteOneBook(entity);
             await _manager.SaveAsync();
         }
@@ -93,9 +76,7 @@ namespace Services
         public async Task<(BookDtoForUpdate bookDtoForUpdate, Book book)> GetOneBookForPatchAsync(int id, bool trackChanges)
         {
             var book = await _manager.Book.GetOneBookByIdAsync(trackChanges, id);
-            if(book is null)
-                throw new BookNotFoundException(id);
-            
+                        
             var bookDtoForUpdate = _mapper.Map<BookDtoForUpdate>(book);
 
             return (bookDtoForUpdate, book);
@@ -106,6 +87,17 @@ namespace Services
         {
             _mapper.Map(bookDtoForUpdate,book);
              await _manager.SaveAsync();
+        }
+
+        private async Task<Book> GetOneBookAndCheckExits(int id, bool trackchanges) {
+
+            var entity = await _manager.Book.GetOneBookByIdAsync(trackchanges, id);
+            if (entity == null)
+            {
+                throw new BookNotFoundException(id);
+            }
+            return entity;
+
         }
     }
 }

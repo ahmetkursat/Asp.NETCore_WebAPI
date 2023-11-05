@@ -46,7 +46,7 @@ namespace Presentation.Controllers
 
         [ServiceFilter(typeof(ValidationFilterAttribute))]
         [HttpPost]
-         public async Task<IActionResult> CreateOneBooksAsync([FromBody] BookDtoForInsert bookDto)
+        public async Task<IActionResult> CreateOneBooksAsync([FromBody] BookDtoForInsert bookDto)
          {
 
        
@@ -58,8 +58,9 @@ namespace Presentation.Controllers
 
          }
         [ServiceFilter(typeof(ValidationFilterAttribute))]
+
         [HttpPut("{id:int}")]
-         public async Task <IActionResult> UpdateOneBookAsync([FromRoute(Name = "id")] int id, [FromBody] BookDtoForUpdate bookDto)
+        public async Task <IActionResult> UpdateOneBookAsync([FromRoute(Name = "id")] int id, [FromBody] BookDtoForUpdate bookDto)
          {
 
         if (bookDto is null)
@@ -78,7 +79,7 @@ namespace Presentation.Controllers
          }
 
           [HttpDelete("{id:int}")]
-          public async Task<IActionResult> DeleteOneBooksAsync([FromRoute(Name = "id")] int id)
+        public async Task<IActionResult> DeleteOneBooksAsync([FromRoute(Name = "id")] int id)
          {
 
             await _manager.BookService.DeleteOneBookAsync(id, false);
@@ -87,7 +88,7 @@ namespace Presentation.Controllers
 
             [HttpPatch("{id:int}")]
 
-            public async Task<IActionResult> PartiallyUpdateOneBook([FromRoute(Name = "id")] int id,
+        public async Task<IActionResult> PartiallyUpdateOneBook([FromRoute(Name = "id")] int id,
              [FromBody] JsonPatchDocument<BookDtoForUpdate> bookPatch)
             {
         
@@ -108,7 +109,9 @@ namespace Presentation.Controllers
         
     }
 
-}
+        
+
+    }
 
 }
 
