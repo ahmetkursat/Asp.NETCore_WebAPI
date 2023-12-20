@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using Entities.DataTransferObject;
 using Entities.Exceptions;
@@ -10,6 +11,7 @@ using Entities.RequestFeature;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using Presentation.ActionFilters;
 using Services.Contracts;
 
@@ -32,8 +34,11 @@ namespace Presentation.Controllers
         [HttpGet]
         public async Task <IActionResult> GetAllBooksAsync([FromQuery]BookParameters bookParameters)
         {
-            var books = await _manager.BookService.GetAllBooksAsync(false,bookParameters);
-            return Ok(books);
+            var pagedResult = await _manager.BookService.GetAllBooksAsync(false,bookParameters);
+
+            Response.Headers.Add("X-Pagination", System.Text.Json.JsonSerializer.Serialize(pagedResult.metaData));
+
+            return Ok(pagedResult.books);
         }
 
         [HttpGet("{id:int}")]
@@ -59,6 +64,7 @@ namespace Presentation.Controllers
 
          }
         [ServiceFilter(typeof(ValidationFilterAttribute))]
+        
 
         [HttpPut("{id:int}")]
         public async Task <IActionResult> UpdateOneBookAsync([FromRoute(Name = "id")] int id, [FromBody] BookDtoForUpdate bookDto)
@@ -79,7 +85,8 @@ namespace Presentation.Controllers
 
          }
 
-          [HttpDelete("{id:int}")]
+
+        [HttpDelete("{id:int}")]
         public async Task<IActionResult> DeleteOneBooksAsync([FromRoute(Name = "id")] int id)
          {
 
@@ -87,8 +94,7 @@ namespace Presentation.Controllers
             return NoContent();
           }
 
-            [HttpPatch("{id:int}")]
-
+        [HttpPatch("{id:int}")]
         public async Task<IActionResult> PartiallyUpdateOneBook([FromRoute(Name = "id")] int id,
              [FromBody] JsonPatchDocument<BookDtoForUpdate> bookPatch)
             {

@@ -9,9 +9,11 @@ using Entities.DataTransferObject;
 using Entities.Exceptions;
 using Entities.Models;
 using Entities.RequestFeature;
+using Entities.RequestParameters;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Repositories.Contracts;
 using Services.Contracts;
+using static Entities.Exceptions.BadRequestException;
 
 namespace Services
 {
@@ -29,11 +31,15 @@ namespace Services
         }
 
 
-        public async Task<IEnumerable<BookDto>> GetAllBooksAsync(bool trackChanges ,BookParameters bookParameters)
+        public async Task<(IEnumerable<BookDto> books, MetaData metaData)> GetAllBooksAsync(bool trackChanges ,BookParameters bookParameters)
         {
-           var books = await _manager.Book.GetAllBooksAsync(bookParameters,trackChanges);
+            if (!bookParameters.ValidPriceRange)
+                throw new PriceOutOfRangeBadRequestException();
 
-           return _mapper.Map<IEnumerable<BookDto>>(books);
+           var booksWithMetaData = await _manager.Book.GetAllBooksAsync(bookParameters,trackChanges);
+
+           var booksDto = _mapper.Map<IEnumerable<BookDto>>(booksWithMetaData);
+            return (booksDto,booksWithMetaData.MetaData);
         }
 
         public async Task<BookDto> GetOneBookByIdAsync(int id, bool trackChanges)

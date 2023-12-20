@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "15rTs9i7juUv+/mqRivV4FEr1kvn1U79nk7SRwn6VGNVnxTBfk6wgzYEm4c8Pd7RjysawLaDtxNM5ph7KYdhuw==",
+  "dgSpecHash": "qYfxUMsxm8DrLWGA2sGet6ad/wYMX7tQv2UVb+1dM4Z2rdm3MqX951eP8h+f8hc8kRNljk0acAmejD3iUMVmWQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ahmet\\OneDrive\\Belgeler\\GitHub\\Asp.NET_CORE_WEB_APİ\\bsStoreApp\\Services\\Services.csproj",
   "expectedPackageFiles": [
@@ -21,6 +21,7 @@
     "C:\\Users\\ahmet\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\ahmet\\.nuget\\packages\\nlog\\5.2.4\\nlog.5.2.4.nupkg.sha512",
     "C:\\Users\\ahmet\\.nuget\\packages\\nlog.extensions.logging\\5.3.4\\nlog.extensions.logging.5.3.4.nupkg.sha512",
+    "C:\\Users\\ahmet\\.nuget\\packages\\system.linq.dynamic.core\\1.3.7\\system.linq.dynamic.core.1.3.7.nupkg.sha512",
     "C:\\Users\\ahmet\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []

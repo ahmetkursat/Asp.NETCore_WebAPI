@@ -1,0 +1,146 @@
+2023-12-20 11:02:24.8537 INFO {"ModelName":"OnActionExecuting","Controller":"Books","Action":"1","Id":"1","CreateAt":"2023-12-20T08:02:24.8012549Z"}
+2023-12-20 11:02:51.3168 INFO {"ModelName":"OnActionExecuting","Controller":"Books","Action":"1","Id":"1","CreateAt":"2023-12-20T08:02:51.3168331Z"}
+2023-12-20 11:04:20.0418 INFO {"ModelName":"OnActionExecuting","Controller":"Books","Action":null,"Id":null,"CreateAt":"2023-12-20T08:04:20.0417923Z"}
+2023-12-20 11:23:10.7060 INFO {"ModelName":"OnActionExecuting","Controller":"Books","Action":null,"Id":null,"CreateAt":"2023-12-20T08:23:10.679224Z"}
+2023-12-20 11:24:07.0059 INFO {"ModelName":"OnActionExecuting","Controller":"Books","Action":null,"Id":null,"CreateAt":"2023-12-20T08:24:07.00589Z"}
+2023-12-20 11:24:51.5380 INFO {"ModelName":"OnActionExecuting","Controller":"Books","Action":null,"Id":null,"CreateAt":"2023-12-20T08:24:51.5380204Z"}
+2023-12-20 11:24:52.2343 ERROR Something went wrong Entities.Exceptions.BadRequestException+PriceOutOfRangeBadRequestException: Maximum price should than 1000 and greater then 10
+   at Services.BookManager.GetAllBooksAsync(Boolean trackChanges, BookParameters bookParameters) in C:\Users\ahmet\OneDrive\Belgeler\GitHub\Asp.NET_CORE_WEB_APİ\bsStoreApp\Services\BookManager.cs:line 37
+   at Presentation.Controllers.BooksController.GetAllBooksAsync(BookParameters bookParameters) in C:\Users\ahmet\OneDrive\Belgeler\GitHub\Asp.NET_CORE_WEB_APİ\bsStoreApp\Presentation\Controllers\BooksController.cs:line 37
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2023-12-20 11:24:56.6024 INFO {"ModelName":"OnActionExecuting","Controller":"Books","Action":null,"Id":null,"CreateAt":"2023-12-20T08:24:56.602457Z"}
+2023-12-20 11:26:31.3265 INFO {"ModelName":"OnActionExecuting","Controller":"Books","Action":null,"Id":null,"CreateAt":"2023-12-20T08:26:31.3264772Z"}
+2023-12-20 11:38:33.3734 INFO {"ModelName":"OnActionExecuting","Controller":"Books","Action":null,"Id":null,"CreateAt":"2023-12-20T08:38:33.34299Z"}
+2023-12-20 11:39:16.2340 INFO {"ModelName":"OnActionExecuting","Controller":"Books","Action":null,"Id":null,"CreateAt":"2023-12-20T08:39:16.2340047Z"}
+2023-12-20 11:39:41.3981 INFO {"ModelName":"OnActionExecuting","Controller":"Books","Action":"1","Id":"1","CreateAt":"2023-12-20T08:39:41.3980616Z"}
+2023-12-20 13:13:26.2397 INFO {"ModelName":"OnActionExecuting","Controller":"Books","Action":null,"Id":null,"CreateAt":"2023-12-20T10:13:26.2053832Z"}
+2023-12-20 13:13:49.3818 INFO {"ModelName":"OnActionExecuting","Controller":"Books","Action":null,"Id":null,"CreateAt":"2023-12-20T10:13:49.3817783Z"}
+2023-12-20 13:13:54.6841 INFO {"ModelName":"OnActionExecuting","Controller":"Books","Action":null,"Id":null,"CreateAt":"2023-12-20T10:13:54.6841423Z"}
+2023-12-20 13:14:02.2121 INFO {"ModelName":"OnActionExecuting","Controller":"Books","Action":null,"Id":null,"CreateAt":"2023-12-20T10:14:02.2121246Z"}
+2023-12-20 13:14:12.3295 INFO {"ModelName":"OnActionExecuting","Controller":"Books","Action":null,"Id":null,"CreateAt":"2023-12-20T10:14:12.329551Z"}
+2023-12-20 14:44:49.4553 INFO {"ModelName":"OnActionExecuting","Controller":"Books","Action":null,"Id":null,"CreateAt":"2023-12-20T11:44:49.3789073Z"}
+2023-12-20 14:45:22.0663 INFO {"ModelName":"OnActionExecuting","Controller":"Books","Action":null,"Id":null,"CreateAt":"2023-12-20T11:45:22.0662778Z"}
+2023-12-20 14:45:33.1554 INFO {"ModelName":"OnActionExecuting","Controller":"Books","Action":null,"Id":null,"CreateAt":"2023-12-20T11:45:33.1554135Z"}
+2023-12-20 14:47:39.1334 INFO {"ModelName":"OnActionExecuting","Controller":"Books","Action":null,"Id":null,"CreateAt":"2023-12-20T11:47:39.133452Z"}
+2023-12-20 14:47:39.9075 ERROR Something went wrong Syntax error (at index 3)
+   at System.Linq.Dynamic.Core.Parser.ExpressionParser.ParseOrdering(Boolean forceThenBy)
+   at System.Linq.Dynamic.Core.DynamicQueryableExtensions.InternalOrderBy(IQueryable source, ParsingConfig config, String ordering, Object comparer, Object[] args)
+   at System.Linq.Dynamic.Core.DynamicQueryableExtensions.OrderBy(IQueryable source, ParsingConfig config, String ordering, Object[] args)
+   at System.Linq.Dynamic.Core.DynamicQueryableExtensions.OrderBy[TSource](IQueryable`1 source, ParsingConfig config, String ordering, Object[] args)
+   at System.Linq.Dynamic.Core.DynamicQueryableExtensions.OrderBy[TSource](IQueryable`1 source, String ordering, Object[] args)
+   at Repositories.EfCore.Extencions.BookRepositoryExtensions.Sort(IQueryable`1 books, String orderByQueryString) in C:\Users\ahmet\OneDrive\Belgeler\GitHub\Asp.NET_CORE_WEB_APİ\bsStoreApp\Repositories\EfCore\Extencions\BookRepositoryExtensions.cs:line 60
+   at Repositories.EfCore.BookRepository.GetAllBooksAsync(BookParameters bookParameters, Boolean trackChanges) in C:\Users\ahmet\OneDrive\Belgeler\GitHub\Asp.NET_CORE_WEB_APİ\bsStoreApp\Repositories\EfCore\BookRepository.cs:line 25
+   at Services.BookManager.GetAllBooksAsync(Boolean trackChanges, BookParameters bookParameters) in C:\Users\ahmet\OneDrive\Belgeler\GitHub\Asp.NET_CORE_WEB_APİ\bsStoreApp\Services\BookManager.cs:line 39
+   at Presentation.Controllers.BooksController.GetAllBooksAsync(BookParameters bookParameters) in C:\Users\ahmet\OneDrive\Belgeler\GitHub\Asp.NET_CORE_WEB_APİ\bsStoreApp\Presentation\Controllers\BooksController.cs:line 37
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2023-12-20 14:47:48.8235 INFO {"ModelName":"OnActionExecuting","Controller":"Books","Action":null,"Id":null,"CreateAt":"2023-12-20T11:47:48.8235653Z"}
+2023-12-20 14:47:49.3602 ERROR Something went wrong Syntax error (at index 3)
+   at System.Linq.Dynamic.Core.Parser.ExpressionParser.ParseOrdering(Boolean forceThenBy)
+   at System.Linq.Dynamic.Core.DynamicQueryableExtensions.InternalOrderBy(IQueryable source, ParsingConfig config, String ordering, Object comparer, Object[] args)
+   at System.Linq.Dynamic.Core.DynamicQueryableExtensions.OrderBy(IQueryable source, ParsingConfig config, String ordering, Object[] args)
+   at System.Linq.Dynamic.Core.DynamicQueryableExtensions.OrderBy[TSource](IQueryable`1 source, ParsingConfig config, String ordering, Object[] args)
+   at System.Linq.Dynamic.Core.DynamicQueryableExtensions.OrderBy[TSource](IQueryable`1 source, String ordering, Object[] args)
+   at Repositories.EfCore.Extencions.BookRepositoryExtensions.Sort(IQueryable`1 books, String orderByQueryString) in C:\Users\ahmet\OneDrive\Belgeler\GitHub\Asp.NET_CORE_WEB_APİ\bsStoreApp\Repositories\EfCore\Extencions\BookRepositoryExtensions.cs:line 60
+   at Repositories.EfCore.BookRepository.GetAllBooksAsync(BookParameters bookParameters, Boolean trackChanges) in C:\Users\ahmet\OneDrive\Belgeler\GitHub\Asp.NET_CORE_WEB_APİ\bsStoreApp\Repositories\EfCore\BookRepository.cs:line 25
+   at Services.BookManager.GetAllBooksAsync(Boolean trackChanges, BookParameters bookParameters) in C:\Users\ahmet\OneDrive\Belgeler\GitHub\Asp.NET_CORE_WEB_APİ\bsStoreApp\Services\BookManager.cs:line 39
+   at Presentation.Controllers.BooksController.GetAllBooksAsync(BookParameters bookParameters) in C:\Users\ahmet\OneDrive\Belgeler\GitHub\Asp.NET_CORE_WEB_APİ\bsStoreApp\Presentation\Controllers\BooksController.cs:line 37
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2023-12-20 14:48:07.6952 INFO {"ModelName":"OnActionExecuting","Controller":"Books","Action":null,"Id":null,"CreateAt":"2023-12-20T11:48:07.6952489Z"}
+2023-12-20 14:48:08.2257 ERROR Something went wrong Syntax error (at index 3)
+   at System.Linq.Dynamic.Core.Parser.ExpressionParser.ParseOrdering(Boolean forceThenBy)
+   at System.Linq.Dynamic.Core.DynamicQueryableExtensions.InternalOrderBy(IQueryable source, ParsingConfig config, String ordering, Object comparer, Object[] args)
+   at System.Linq.Dynamic.Core.DynamicQueryableExtensions.OrderBy(IQueryable source, ParsingConfig config, String ordering, Object[] args)
+   at System.Linq.Dynamic.Core.DynamicQueryableExtensions.OrderBy[TSource](IQueryable`1 source, ParsingConfig config, String ordering, Object[] args)
+   at System.Linq.Dynamic.Core.DynamicQueryableExtensions.OrderBy[TSource](IQueryable`1 source, String ordering, Object[] args)
+   at Repositories.EfCore.Extencions.BookRepositoryExtensions.Sort(IQueryable`1 books, String orderByQueryString) in C:\Users\ahmet\OneDrive\Belgeler\GitHub\Asp.NET_CORE_WEB_APİ\bsStoreApp\Repositories\EfCore\Extencions\BookRepositoryExtensions.cs:line 60
+   at Repositories.EfCore.BookRepository.GetAllBooksAsync(BookParameters bookParameters, Boolean trackChanges) in C:\Users\ahmet\OneDrive\Belgeler\GitHub\Asp.NET_CORE_WEB_APİ\bsStoreApp\Repositories\EfCore\BookRepository.cs:line 25
+   at Services.BookManager.GetAllBooksAsync(Boolean trackChanges, BookParameters bookParameters) in C:\Users\ahmet\OneDrive\Belgeler\GitHub\Asp.NET_CORE_WEB_APİ\bsStoreApp\Services\BookManager.cs:line 39
+   at Presentation.Controllers.BooksController.GetAllBooksAsync(BookParameters bookParameters) in C:\Users\ahmet\OneDrive\Belgeler\GitHub\Asp.NET_CORE_WEB_APİ\bsStoreApp\Presentation\Controllers\BooksController.cs:line 37
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2023-12-20 14:48:10.2446 INFO {"ModelName":"OnActionExecuting","Controller":"Books","Action":null,"Id":null,"CreateAt":"2023-12-20T11:48:10.2446689Z"}
+2023-12-20 14:48:10.7758 ERROR Something went wrong Syntax error (at index 3)
+   at System.Linq.Dynamic.Core.Parser.ExpressionParser.ParseOrdering(Boolean forceThenBy)
+   at System.Linq.Dynamic.Core.DynamicQueryableExtensions.InternalOrderBy(IQueryable source, ParsingConfig config, String ordering, Object comparer, Object[] args)
+   at System.Linq.Dynamic.Core.DynamicQueryableExtensions.OrderBy(IQueryable source, ParsingConfig config, String ordering, Object[] args)
+   at System.Linq.Dynamic.Core.DynamicQueryableExtensions.OrderBy[TSource](IQueryable`1 source, ParsingConfig config, String ordering, Object[] args)
+   at System.Linq.Dynamic.Core.DynamicQueryableExtensions.OrderBy[TSource](IQueryable`1 source, String ordering, Object[] args)
+   at Repositories.EfCore.Extencions.BookRepositoryExtensions.Sort(IQueryable`1 books, String orderByQueryString) in C:\Users\ahmet\OneDrive\Belgeler\GitHub\Asp.NET_CORE_WEB_APİ\bsStoreApp\Repositories\EfCore\Extencions\BookRepositoryExtensions.cs:line 60
+   at Repositories.EfCore.BookRepository.GetAllBooksAsync(BookParameters bookParameters, Boolean trackChanges) in C:\Users\ahmet\OneDrive\Belgeler\GitHub\Asp.NET_CORE_WEB_APİ\bsStoreApp\Repositories\EfCore\BookRepository.cs:line 25
+   at Services.BookManager.GetAllBooksAsync(Boolean trackChanges, BookParameters bookParameters) in C:\Users\ahmet\OneDrive\Belgeler\GitHub\Asp.NET_CORE_WEB_APİ\bsStoreApp\Services\BookManager.cs:line 39
+   at Presentation.Controllers.BooksController.GetAllBooksAsync(BookParameters bookParameters) in C:\Users\ahmet\OneDrive\Belgeler\GitHub\Asp.NET_CORE_WEB_APİ\bsStoreApp\Presentation\Controllers\BooksController.cs:line 37
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2023-12-20 14:48:23.9914 INFO {"ModelName":"OnActionExecuting","Controller":"Books","Action":null,"Id":null,"CreateAt":"2023-12-20T11:48:23.9914681Z"}
+2023-12-20 14:48:47.7765 INFO {"ModelName":"OnActionExecuting","Controller":"Books","Action":null,"Id":null,"CreateAt":"2023-12-20T11:48:47.7765324Z"}
+2023-12-20 15:07:34.0173 INFO {"ModelName":"OnActionExecuting","Controller":"Books","Action":null,"Id":null,"CreateAt":"2023-12-20T12:07:33.9887963Z"}
+2023-12-20 15:07:46.2475 INFO {"ModelName":"OnActionExecuting","Controller":"Books","Action":null,"Id":null,"CreateAt":"2023-12-20T12:07:46.2475225Z"}
+2023-12-20 15:07:54.1081 INFO {"ModelName":"OnActionExecuting","Controller":"Books","Action":null,"Id":null,"CreateAt":"2023-12-20T12:07:54.108075Z"}
